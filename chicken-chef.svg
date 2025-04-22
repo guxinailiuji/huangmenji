@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Chef Hat -->
+  <path d="M150 30c-25 0-45 20-45 45 0 5 1 10 3 15h84c2-5 3-10 3-15 0-25-20-45-45-45z" fill="white"/>
+  <path d="M108 90v10h84v-10h-84z" fill="white"/>
+  
+  <!-- Chicken Body -->
+  <circle cx="150" cy="150" r="70" fill="#EAB308"/>
+  
+  <!-- Wings -->
+  <ellipse cx="90" cy="150" rx="25" ry="40" fill="#D97706"/>
+  <ellipse cx="210" cy="150" rx="25" ry="40" fill="#D97706"/>
+  
+  <!-- Eyes -->
+  <circle cx="130" cy="130" r="10" fill="white"/>
+  <circle cx="170" cy="130" r="10" fill="white"/>
+  <circle cx="130" cy="130" r="5" fill="black"/>
+  <circle cx="170" cy="130" r="5" fill="black"/>
+  
+  <!-- Beak -->
+  <path d="M150 145 L140 160 L160 160 Z" fill="#F59E0B"/>
+  
+  <!-- Feet -->
+  <path d="M130 220 L120 240 L130 240 L140 230 Z" fill="#F59E0B"/>
+  <path d="M170 220 L180 240 L170 240 L160 230 Z" fill="#F59E0B"/>
+  
+  <!-- Cooking Spoon -->
+  <rect x="210" y="150" width="10" height="80" fill="#92400E" rx="5"/>
+  <ellipse cx="215" cy="140" rx="20" ry="15" fill="#92400E"/>
+  
+  <!-- Smile -->
+  <path d="M140 170 Q150 180 160 170" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Steam -->
+  <path d="M120 80 Q110 70 120 60 Q130 50 120 40" fill="none" stroke="white" stroke-width="3" opacity="0.7"/>
+  <path d="M150 80 Q140 70 150 60 Q160 50 150 40" fill="none" stroke="white" stroke-width="3" opacity="0.7"/>
+  <path d="M180 80 Q170 70 180 60 Q190 50 180 40" fill="none" stroke="white" stroke-width="3" opacity="0.7"/>
+</svg>

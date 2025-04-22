@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Geist';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+}
+
+.font-geist {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-geist-mono {
+    font-family: 'Courier New', monospace;
+}
+
+/* Base Styles */
+body {
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Animated Background */
+.stars-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.stars, .stars2, .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.stars {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3"><circle cx="1.5" cy="1.5" r="0.5" fill="%23FFFFFF" opacity="0.3"/></svg>') repeat;
+    animation: animStar 50s linear infinite;
+}
+
+.stars2 {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"><circle cx="2" cy="2" r="0.7" fill="%23FFFFFF" opacity="0.2"/></svg>') repeat;
+    animation: animStar 100s linear infinite;
+}
+
+.stars3 {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 5 5"><circle cx="2.5" cy="2.5" r="0.8" fill="%23EAB308" opacity="0.15"/></svg>') repeat;
+    animation: animStar 150s linear infinite;
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-1000px);
+    }
+}
+
+/* Button Styles */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #EAB308;
+    color: #000;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #F59E0B;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(234, 179, 8, 0.2);
+    color: #EAB308;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: 1px solid #EAB308;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(234, 179, 8, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: 1px solid #374151;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    border-color: #EAB308;
+    color: #EAB308;
+    transform: translateY(-2px);
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Shadow Effects */
+.shadow-glow {
+    box-shadow: 0 0 15px rgba(234, 179, 8, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-glow:hover {
+    box-shadow: 0 0 25px rgba(234, 179, 8, 0.2);
+}
+
+/* Animation */
+.bounce-animation {
+    animation: bounce 6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Roadmap Styles */
+.roadmap-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.roadmap-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 2px;
+    background: #374151;
+}
+
+.roadmap-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 40px;
+}
+
+.roadmap-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #111827;
+    border: 2px solid #374151;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9CA3AF;
+    z-index: 1;
+}
+
+.roadmap-item.active .roadmap-icon {
+    background-color: rgba(234, 179, 8, 0.2);
+    border-color: #EAB308;
+    color: #EAB308;
+}
+
+.roadmap-content {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.roadmap-item.active .roadmap-content {
+    border-color: #EAB308;
+    box-shadow: 0 0 15px rgba(234, 179, 8, 0.1);
+}
+
+/* Community Cards */
+.community-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.community-card:hover {
+    transform: translateY(-5px);
+    border-color: #EAB308;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.community-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.community-icon.telegram {
+    background-color: rgba(0, 136, 204, 0.2);
+    color: #0088cc;
+}
+
+.community-icon.twitter {
+    background-color: rgba(29, 161, 242, 0.2);
+    color: #1da1f2;
+}
+
+.community-icon.discord {
+    background-color: rgba(114, 137, 218, 0.2);
+    color: #7289da;
+}
+
+.community-icon.medium {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.community-card:hover .community-icon.telegram {
+    background-color: rgba(0, 136, 204, 0.3);
+}
+
+.community-card:hover .community-icon.twitter {
+    background-color: rgba(29, 161, 242, 0.3);
+}
+
+.community-card:hover .community-icon.discord {
+    background-color: rgba(114, 137, 218, 0.3);
+}
+
+.community-card:hover .community-icon.medium {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Copy Button Animation */
+.copy-btn {
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    transform: scale(1.1);
+}
+
+.copy-btn.copied {
+    color: #10B981;
+}
+
+/* Mobile Menu Toggle */
+#mobile-menu {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+#mobile-menu.active {
+    transform: translateY(0);
+    display: block;
+}

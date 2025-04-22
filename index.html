@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>$HMJ - 黄焖鸡币 | 一口入魂，一币社区！</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icon@latest/dist/umd/lucide-icon.min.js">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white min-h-screen font-geist">
+    <div class="stars-container absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <header class="relative z-10 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="logo.svg" alt="HMJ Logo" class="h-10 w-10">
+                <span class="text-xl font-bold text-yellow-500">$HMJ <span class="text-white text-sm">黄焖鸡币</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-yellow-500 transition">关于我们</a>
+                <a href="#tokenomics" class="hover:text-yellow-500 transition">代币经济</a>
+                <a href="#how-to-buy" class="hover:text-yellow-500 transition">如何购买</a>
+                <a href="#roadmap" class="hover:text-yellow-500 transition">发展路线</a>
+                <a href="#community" class="hover:text-yellow-500 transition">社区</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-gray-900 border-b border-gray-800 z-50">
+            <div class="container mx-auto px-4 py-2">
+                <a href="#about" class="block py-2 hover:text-yellow-500">关于我们</a>
+                <a href="#tokenomics" class="block py-2 hover:text-yellow-500">代币经济</a>
+                <a href="#how-to-buy" class="block py-2 hover:text-yellow-500">如何购买</a>
+                <a href="#roadmap" class="block py-2 hover:text-yellow-500">发展路线</a>
+                <a href="#community" class="block py-2 hover:text-yellow-500">社区</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                            一口入魂，一币社区！
+                            <span class="text-yellow-500">$HMJ 不止是黄焖鸡！</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-8">
+                            忘掉山珍海味，忘掉涨跌K线图！$HMJ给你暖心暖胃的社区归属感！
+                            我们是一群为黄焖鸡疯狂打Call的吃货，我们是$HMJ！
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#how-to-buy" class="btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                                立即开吃 (购买$HMJ)
+                            </a>
+                            <a href="#community" class="btn-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                端上餐桌 (加入电报群)
+                            </a>
+                            <a href="#" class="btn-outline">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+                                查看菜单 (阅读白皮书)
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="chicken-chef.svg" alt="HMJ Mascot" class="w-full max-w-md bounce-animation">
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 bg-gray-900 relative">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">$HMJ：一碗有故事的黄焖鸡 (币)</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <div class="bg-black border border-gray-800 rounded-xl p-6 md:p-8 shadow-glow">
+                            <h3 class="text-2xl font-bold mb-4 text-yellow-500">起源故事</h3>
+                            <p class="text-gray-300 mb-6">
+                                "话说在一个月黑风高的夜晚，我们团队饿得前胸贴后背，脑子里只有一个声音在呐喊：'黄焖鸡！' 
+                                那销魂的滋味，简直是人间值得！突然灵光一闪：如果这份快乐能分享给全世界的'饭友'呢？
+                                于是，$HMJ 就这么'炖'出来了！我们的目标不是星辰大海，而是让你在币圈也能感受到那份热腾腾的满足感！
+                                （顺便，也许，可能，发点小财？你懂的 😉）"
+                            </p>
+                            <div class="space-y-4">
+                                <div class="border border-gray-800 rounded-lg p-4 bg-gradient-to-r from-gray-900 to-black">
+                                    <h4 class="font-bold text-white mb-2">使命</h4>
+                                    <p class="text-gray-400">让 $HMJ 像街头巷尾的黄焖鸡小馆一样，无处不在！让每个持有者都能喊出："真香！"</p>
+                                </div>
+                                <div class="border border-gray-800 rounded-lg p-4 bg-gradient-to-r from-gray-900 to-black">
+                                    <h4 class="font-bold text-white mb-2">愿景</h4>
+                                    <p class="text-gray-400">有黄焖鸡的地方，就有 $HMJ 的传说！打造宇宙第一吃货 Meme 社区！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="rounded-xl overflow-hidden border border-gray-800 shadow-glow">
+                            <img src="https://r2.flowith.net/files/a87c9365-1e4b-4dc9-9f13-64f1950cf211/1745307332087-Genera.jpeg" alt="吃货社区" class="w-full">
+                        </div>
+                        <p class="mt-6 text-xl text-center text-gray-300 italic">
+                            $HMJ 不只是一串代码，它是干饭人的精神图腾，是深夜里的灵魂慰藉，是'小份微辣加俩香菇'的小确幸。
+                            加入我们，一起用 $HMJ '焖'出精彩！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tokenomics Section -->
+        <section id="tokenomics" class="py-16 md:py-24 relative">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">代币经济学：看看这锅 $HMJ 里都有啥猛料！</h2>
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/2">
+                        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 md:p-8 shadow-glow">
+                            <div class="flex items-center justify-between mb-6">
+                                <div>
+                                    <h3 class="text-3xl font-bold text-yellow-500">$HMJ</h3>
+                                    <p class="text-gray-400">HuangMenJi Coin - 记住这个代码，发家致富就靠它了！</p>
+                                </div>
+                                <img src="logo.svg" alt="HMJ Logo" class="h-16 w-16">
+                            </div>
+                            <div class="space-y-6">
+                                <div class="border border-gray-800 rounded-lg p-4 bg-black">
+                                    <h4 class="font-bold text-white mb-2">总供应量</h4>
+                                    <p class="text-3xl font-bold text-yellow-500">10,000,000,000 $HMJ</p>
+                                    <p class="text-gray-400 text-sm">十亿！寓意十全十美，够喂饱全村老小！</p>
+                                </div>
+                                <div class="border border-gray-800 rounded-lg p-4 bg-black">
+                                    <h4 class="font-bold text-white mb-2">交易税费</h4>
+                                    <p class="text-xl text-gray-300">
+                                        每次买卖 $HMJ，就像给老板说"老板，加点辣！" 我们会收取 <span class="text-yellow-500 font-bold">1% 的'调料费'</span> (买入 1% + 卖出 1%)。
+                                    </p>
+                                    <p class="text-gray-400 mt-2">
+                                        这点小钱钱，一部分用来<span class="font-bold">回馈社区（加鸡腿！）</span>，一部分用来<span class="font-bold">市场推广（吆喝！）</span>，让 $HMJ 的味道越来越正！
+                                    </p>
+                                </div>
+                                <div class="border border-gray-800 rounded-lg p-4 bg-black">
+                                    <h4 class="font-bold text-white mb-2">官方合约地址</h4>
+                                    <div class="flex items-center bg-gray-900 rounded p-2">
+                                        <code class="text-xs md:text-sm text-gray-400 flex-1 overflow-hidden text-ellipsis whitespace-nowrap">0x1234567890123456789012345678901234567890</code>
+                                        <button class="copy-btn ml-2 p-1 text-gray-400 hover:text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c0-1.1.9-2 2-2h2"/><path d="M4 12c0-1.1.9-2 2-2h2"/><path d="M4 8c0-1.1.9-2 2-2h2"/></svg>
+                                        </button>
+                                    </div>
+                                    <p class="text-yellow-500 text-sm mt-2 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle mr-1"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                                        认准官方砂锅编号，山寨店的黄焖鸡吃了拉肚子概不负责！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-6 text-center">"鸡块"分配</h3>
+                        <div class="chart-container relative">
+                            <canvas id="tokenomicsChart" width="400" height="400"></canvas>
+                        </div>
+                        <div class="mt-8 space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-4 h-4 rounded bg-yellow-500 mt-1 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-bold">社区空投/奖励 (40%)</h4>
+                                    <p class="text-gray-400">大块鸡腿先到先得！给早期支持者和社区活跃分子的福利！</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-4 h-4 rounded bg-amber-600 mt-1 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-bold">初始流动性 (40%)</h4>
+                                    <p class="text-gray-400">浓郁汤汁打底！保证你在 DEX 买卖顺滑，想吃就吃！(LP 已锁定，安全第一！)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-4 h-4 rounded bg-green-500 mt-1 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-bold">营销/发展基金 (10%)</h4>
+                                    <p class="text-gray-400">香菇青椒不能少！用来宣传推广，让更多人闻香而来，把 $HMJ 的招牌挂满全球！</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-4 h-4 rounded bg-red-500 mt-1 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-bold">团队持有 (10% - 已锁仓)</h4>
+                                    <p class="text-gray-400">大厨也得留点锅巴尝尝味！团队份额会逐步解锁，我们陪大家一起把这锅鸡焖得更香！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Buy Section -->
+        <section id="how-to-buy" class="py-16 md:py-24 bg-gray-900 relative">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">三步搞定！把热乎的 $HMJ 端上你的数字餐桌！</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                    <div class="bg-black border border-gray-800 rounded-xl p-6 shadow-glow">
+                        <div class="w-16 h-16 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl font-bold text-yellow-500">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">备好'餐具' (钱包)</h3>
+                        <p class="text-gray-400 mb-4">下载 MetaMask、Trust Wallet 或其他你用得顺手的钱包 App。这是你的专属碗筷！</p>
+                        <img src="https://r2.flowith.net/files/a87c9365-1e4b-4dc9-9f13-64f1950cf211/1745307332053-Create.jpeg" alt="钱包图标" class="w-full rounded-lg">
+                    </div>
+                    
+                    <div class="bg-black border border-gray-800 rounded-xl p-6 shadow-glow">
+                        <div class="w-16 h-16 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl font-bold text-yellow-500">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">准备'饭票' (基础币)</h3>
+                        <p class="text-gray-400 mb-4">确保钱包里有足够的 BNB (币安智能链) 或 ETH (以太坊)。这是买鸡的本钱！</p>
+                        <div class="flex space-x-4 mt-4">
+                            <div class="w-1/2 bg-gray-900 rounded-lg p-3 text-center">
+                                <img src="https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png" alt="BNB" class="h-12 mx-auto">
+                                <p class="mt-2 text-sm">BNB</p>
+                            </div>
+                            <div class="w-1/2 bg-gray-900 rounded-lg p-3 text-center">
+                                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" class="h-12 mx-auto">
+                                <p class="mt-2 text-sm">ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-black border border-gray-800 rounded-xl p-6 shadow-glow">
+                        <div class="w-16 h-16 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl font-bold text-yellow-500">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">前往'食堂' (交易所)</h3>
+                        <p class="text-gray-400 mb-4">点击下方按钮直达 PancakeSwap / Uniswap。别走错门了！</p>
+                        <a href="#" class="block bg-gray-900 hover:bg-gray-800 transition rounded-lg p-4 text-center">
+                            <img src="https://pancakeswap.finance/logo.png" alt="PancakeSwap" class="h-12 mx-auto">
+                            <p class="mt-2">PancakeSwap</p>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-black border border-gray-800 rounded-xl p-6 shadow-glow">
+                        <div class="w-16 h-16 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl font-bold text-yellow-500">4</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">下单 $HMJ</h3>
+                        <p class="text-gray-400 mb-4">在交易所找到 $HMJ (可以直接复制粘贴上面的合约地址搜索)，输入你想买的数量，点击"Swap"或"兑换"。</p>
+                        <a href="#" class="btn-primary w-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play mr-2"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                            观看视频教程
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="py-16 md:py-24 relative">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">我们的'上菜'计划： $HMJ 一步一脚印，香飘万里！</h2>
+                
+                <div class="roadmap-container mt-12">
+                    <div class="roadmap-item active">
+                        <div class="roadmap-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                        </div>
+                        <div class="roadmap-content">
+                            <h3 class="text-xl font-bold mb-2">Phase 1: 开火猛炒 <span class="text-yellow-500">(进行中)</span></h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="text-green-500 mr-2">✅</span>
+                                    $HMJ 热辣出炉！(代币发布)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-green-500 mr-2">✅</span>
+                                    官网 V1 开门迎客 (网站上线)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-green-500 mr-2">✅</span>
+                                    电报/推特群英荟萃 (社群建立)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-yellow-500 mr-2">➡️</span>
+                                    登陆 CoinGecko / CMC (让全球吃货找到家)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cooking-pot"><path d="M2 12h20"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="M4 8h16a2 2 0 0 1 2 2v2H2v-2a2 2 0 0 1 2-2z"/><path d="M7 8v4"/><path d="M17 8v4"/><path d="M14 8a2 2 0 0 0-4 0"/></svg>
+                        </div>
+                        <div class="roadmap-content">
+                            <h3 class="text-xl font-bold mb-2">Phase 2: 文火慢炖 <span class="text-blue-500">(即将开启)</span></h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🌶️</span>
+                                    第一届 $HMJ 表情包/Meme 创作大赛 (社区狂欢)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🤝</span>
+                                    寻找美食界/币圈 KOL 联名带货 (破圈行动)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">📈</span>
+                                    冲击首个中心化交易所 (CEX Listing 尝试)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🎮</span>
+                                    开发 $HMJ 主题小游戏或趣味应用 (增加乐趣)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chili-hot"><path d="M12 6a6 6 0 0 0-4.5 2m0 0a6 6 0 0 0 0 8.5m0-8.5 5 1m-5 7.5a6 6 0 0 0 7.5 0m0 0a6 6 0 0 0 0-8.5m0 8.5-5-1"/><path d="m12 2 1.56 4.68"/></svg>
+                        </div>
+                        <div class="roadmap-content">
+                            <h3 class="text-xl font-bold mb-2">Phase 3: 加料爆香 <span class="text-purple-500">(未来可期)</span></h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🎨</span>
+                                    限量版 $HMJ 卡通 NFT 发售 (你的专属数字鸡块！)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🛍️</span>
+                                    官方'食堂小卖部'上线 (买 T 恤送 $HMJ？)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🍜</span>
+                                    尝试与线下黄焖鸡店搞事情 (持有 $HMJ 吃鸡打折？)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🗳️</span>
+                                    探索社区治理新玩法 (你的 $HMJ 你做主！)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                        </div>
+                        <div class="roadmap-content">
+                            <h3 class="text-xl font-bold mb-2">Phase 4: 香飘四海 <span class="text-pink-500">(终极梦想)</span></h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🚀</span>
+                                    未来？让想象力飞一会儿！也许是 $HMJ 太空鸡？
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">🌟</span>
+                                    登陆顶级'米其林'交易所 (Major Exchanges)
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-gray-500 mr-2">❤️</span>
+                                    持续建设社区，用 $HMJ 做点好事 (Charity & Community Growth)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="py-16 md:py-24 bg-gray-900 relative">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">别光看着，快来一起'恰饭'吹水！</h2>
+                <p class="text-xl text-center text-gray-300 max-w-3xl mx-auto mb-12">
+                    一个人吃黄焖鸡多孤单？赶紧加入 $HMJ 的官方大本营！这里有最新的内幕消息（并没有），最沙雕的 Meme，最热烈的讨论，
+                    还有一群和你一样，既爱黄焖鸡，又梦想暴富的饭友！
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a href="#" class="community-card">
+                        <div class="community-icon telegram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Telegram</h3>
+                        <p class="text-gray-400">主要据点，速来！</p>
+                    </a>
+                    
+                    <a href="#" class="community-card">
+                        <div class="community-icon twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Twitter</h3>
+                        <p class="text-gray-400">关注获取最新动态！</p>
+                    </a>
+                    
+                    <a href="#" class="community-card">
+                        <div class="community-icon discord">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Discord</h3>
+                        <p class="text-gray-400">吃货语音派对房间</p>
+                    </a>
+                    
+                    <a href="#" class="community-card">
+                        <div class="community-icon medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Medium</h3>
+                        <p class="text-gray-400">项目公告和更新</p>
+                    </a>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <img src="https://r2.flowith.net/files/a87c9365-1e4b-4dc9-9f13-64f1950cf211/1745307332409-Create.jpeg" alt="社区互动" class="max-w-md mx-auto rounded-xl shadow-glow">
+                    <p class="mt-6 text-2xl font-bold text-yellow-500">饭点到了，就等你啦！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black border-t border-gray-800 py-8 relative z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <img src="logo.svg" alt="HMJ Logo" class="h-8 w-8">
+                        <span class="text-lg font-bold text-yellow-500">$HMJ <span class="text-white text-xs">黄焖鸡币</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm">© 2024 黄焖鸡币 ($HMJ). 所有配方和解释权归社区所有。</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <div class="flex space-x-4 mb-4 justify-center md:justify-end">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+                        </a>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <p class="text-gray-500 text-sm">
+                            <a href="#" class="text-gray-400 hover:text-white transition">联系我们</a> •
+                            <a href="#" class="text-gray-400 hover:text-white transition">隐私政策</a> •
+                            <a href="#top" class="text-gray-400 hover:text-white transition">回到锅顶 ⬆️</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 border-t border-gray-800 pt-6">
+                <p class="text-gray-500 text-sm text-center">
+                    <strong class="text-yellow-500">免责声明:</strong> 投资加密货币风险极高，请务必做好研究并谨慎操作。$HMJ 是一个纯粹的 Meme 币，
+                    为社区娱乐而生，没有实际应用场景，也不承诺任何财务回报。我们不提供任何投资建议。
+                    买卖 $HMJ 风险自负，亏了别找我们哭鼻子，赚了记得请大家吃黄焖鸡！
+                </p>
+            </div>
+            
+            <div class="mt-4 text-center text-gray-600 text-xs">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey
+            if(isPinching) e.preventDefault()
+        }, { passive: false })
+    </script>
+</body>
+</html>

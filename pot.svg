@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Pot Body -->
+  <path d="M40 80 L40 160 Q40 180 60 180 L140 180 Q160 180 160 160 L160 80 Z" fill="#444"/>
+  <path d="M30 80 L170 80 Q170 60 150 60 L50 60 Q30 60 30 80 Z" fill="#555"/>
+  
+  <!-- Pot Handles -->
+  <path d="M40 90 Q20 100 40 110" fill="none" stroke="#555" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 90 Q180 100 160 110" fill="none" stroke="#555" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Lid -->
+  <ellipse cx="100" cy="60" rx="60" ry="10" fill="#555"/>
+  <circle cx="100" cy="50" r="10" fill="#666"/>
+  
+  <!-- Steam -->
+  <path d="M80 50 Q70 30 80 20" fill="none" stroke="white" stroke-width="2" opacity="0.7">
+    <animate attributeName="d" values="M80 50 Q70 30 80 20; M80 50 Q90 30 80 20; M80 50 Q70 30 80 20" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M100 50 Q90 30 100 10" fill="none" stroke="white" stroke-width="2" opacity="0.7">
+    <animate attributeName="d" values="M100 50 Q90 30 100 10; M100 50 Q110 30 100 10; M100 50 Q90 30 100 10" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M120 50 Q110 30 120 20" fill="none" stroke="white" stroke-width="2" opacity="0.7">
+    <animate attributeName="d" values="M120 50 Q110 30 120 20; M120 50 Q130 30 120 20; M120 50 Q110 30 120 20" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Pot Contents -->
+  <ellipse cx="100" cy="100" rx="50" ry="10" fill="#EAB308"/>
+  
+  <!-- Chicken Pieces -->
+  <circle cx="80" cy="120" r="10" fill="#D97706"/>
+  <circle cx="120" cy="120" r="12" fill="#D97706"/>
+  <circle cx="100" cy="140" r="15" fill="#D97706"/>
+  
+  <!-- Vegetables -->
+  <circle cx="70" cy="100" r="8" fill="#166534"/>  <!-- Green pepper -->
+  <circle cx="130" cy="110" r="6" fill="#166534"/>  <!-- Green pepper -->
+  <path d="M90 110 L110 110 Q110 130 90 130 Z" fill="#422006"/> <!-- Mushroom -->
+</svg>
